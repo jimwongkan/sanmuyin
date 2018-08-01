@@ -1,6 +1,6 @@
 <table>
 	<thead>
-		<tr><td>TITLE</td><td>REVIEWS</td></tr>
+		<tr><td>TITLE</td><td>REVIEWS</td><td>createdDate</td></tr>
 	</thead>
 <tbody>
 {% load pagination_tags %}
@@ -9,6 +9,8 @@
 	<tr> 
 		<td>{{item.title}}</td>
 		<td>{{item.reviews}}</td>
+		<td>{{item.createdDate}}</td>
+		
 	</tr>
 	{% endfor %} 
 {% paginate %}
