@@ -1,0 +1,16 @@
+<table>
+	<thead>
+		<tr><td>TITLE</td><td>REVIEWS</td></tr>
+	</thead>
+<tbody>
+{% load pagination_tags %}
+{% autopaginate productList 10 %} 
+	{% for item in productList %} 
+	<tr> 
+		<td>{{item.title}}</td>
+		<td>{{item.reviews}}</td>
+	</tr>
+	{% endfor %} 
+{% paginate %}
+</tbody>
+</table>
